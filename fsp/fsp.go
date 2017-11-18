@@ -15,8 +15,8 @@ const (
 <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 <cross-domain-policy>
   <site-control permitted-cross-domain-policies="master-only"/>
-  <allow-access-from domain="*" />
-</cross-domain-policy>\x00`
+  <allow-access-from domain="*" to-ports="*" />
+</cross-domain-policy>` + "\x00"
 )
 
 type Server struct {

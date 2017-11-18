@@ -13,6 +13,11 @@ or
 docker run -d -p 843:843 -v `pwd`/crossdomain.xml:/crossdomain.xml sandinh/flash-socket-policy gofsp -file=/crossdomain.xml
 ```
 
+Test with:
+```bash
+printf "<policy-file-request/>\0" | nc 127.0.0.1 843
+```
+
 ## License
 
 This project is free to use and licensed under LGPL.
