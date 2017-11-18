@@ -1,12 +1,13 @@
 sudo: required
 language: bash
 services: docker
-before_deploy:
+script:
 - docker run --rm -v "$PWD":/go/src/flash-socket-policy-docker -w /go/src/flash-socket-policy-docker golang:1.8-alpine3.6 ./build.sh
 deploy:
   provider: releases
   api_key:
     secure: sNqFfDnYIJAoJSH0ZjAwjL93jeqAymAQ3hqccxYiIsuUDHMLUnLsftWsHd/kAEMDvGMzABV7pR5k5AcbmBAi7NkijzT5eiOcWk8YAKrNGBIqYh8US+/g2FJa92Yi2r+GocPMSks6p9AhjAqSikMTwf41xqC6VqnQkuetZCLVL83pvVrIq+xGQe1pqnDWRfT2FcSH+abrGtn4BVBjRUfX5tsnoOLKlvuEzqByyAZ44wI8OuXvEeFHUpf3tYM7OjPClQtU6JHmqMXQ9XHKJKNIgloyR8t2pPjnZISd7V2RAt/lzFKPLWPX83TWb0wE0fG/boCmhM/aSAFw0mcBKXsM+7gTtmA8zO6gMSQfHPX2rS1C0RqQR+qsZI9a9q6JLChLTJuml+ZIyyrf6G9wGJG5e2lTThtOyR5bdcYIUs2I/2eK2OX5lDKva6e3lnf6CDxkGtV9+hqGfvGspJDkP5txQOMDl7g3d8pSXNa5MrI0bFrmprwXnp4HfIDpPascgDwJZkegFfZVMbPukNg+EyBJMYDmhlT4YG14Hx0pfOEdAjA9wKuc7A9QW9y3snrg0G3CP5SjfZj46lamGwWo0Dedy9w0ieeWp4B8o8s4hAV8Jz+6l2ZmYWQi4Pfi+aN5BtgoLj1AZhZq9Wc/qDmRwE/5vvf97aQZAUPCsO6omPg30K0=
-  file: build/fsp
+  file: build/gofsp
   on:
     repo: ohze/flash-socket-policy-docker
+    tags: true

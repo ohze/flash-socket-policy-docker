@@ -1,19 +1,16 @@
+# flash-socket-policy-docker
+[![Build Status](https://travis-ci.org/ohze/flash-socket-policy-docker.svg?branch=master)](https://travis-ci.org/ohze/flash-socket-policy-docker)
+
 Flash [Socket Policy files](http://www.adobe.com/devnet/flashplayer/articles/socket_policy_files.html) server implement in Go.
-
-## Getting gofsp
-
-build from source
-```bash
-go get -u github.com/jarod/gofsp
-```
-
-or get the [pre-built binaries](https://code.google.com/p/jarod/downloads/list?q=label:gofsp).
-
 
 ## Usages
 
+```bash
+docker run -d -p 843:843 sandinh/flash-socket-policy
 ```
-sudo gofsp [-file="path to policy file"]
+or
+```bash
+docker run -d -p 843:843 -v `pwd`/crossdomain.xml:/crossdomain.xml sandinh/flash-socket-policy gofsp -file=/crossdomain.xml
 ```
 
 ## License
