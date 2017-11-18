@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-LABEL maintainer="Ohze JSC <thanhbv@sandinh.net>""
+LABEL maintainer="Ohze JSC <thanhbv@sandinh.net>"
 
 ARG VERSION_TAG=v1.0.0
 
