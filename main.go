@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	VERSION = "1.0.0"
+	VERSION = "1.0.1"
 )
 
 var version = flag.Bool("version", false, "show gofsp version")
