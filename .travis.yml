@@ -1,0 +1,5 @@
+sudo: required
+language: bash
+services: docker
+before_deploy:
+- docker run --rm -v "$PWD":/go/src/flash-socket-policy-docker -w /go/src/flash-socket-policy-docker golang:1.8-alpine3.6 ./build.sh
