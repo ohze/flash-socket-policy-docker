@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/jarod/gofsp/fsp"
+	"github.com/ohze/flash-socket-policy-docker/fsp"
 	"log"
 	"os"
 )
