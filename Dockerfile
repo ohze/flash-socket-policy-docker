@@ -1,8 +1,8 @@
-FROM alpine:3.6
+FROM alpine:3.10
 
 LABEL maintainer="Ohze JSC <thanhbv@sandinh.net>"
 
-ARG VERSION_TAG=v1.0.1
+ARG VERSION_TAG=v1.0.2
 
 RUN \
     apk add --no-cache --virtual .build-deps ca-certificates curl && \

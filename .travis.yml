@@ -1,8 +1,7 @@
-sudo: required
 language: bash
 services: docker
 script:
-- docker run --rm -v "$PWD":/go/src/flash-socket-policy-docker -w /go/src/flash-socket-policy-docker golang:1.8-alpine3.6 ./build.sh
+- docker run --rm -v "$PWD":/go/src/flash-socket-policy-docker -w /go/src/flash-socket-policy-docker golang:1.13-alpine3.10 ./build.sh
 deploy:
   provider: releases
   api_key:
